@@ -1,11 +1,15 @@
 /* Global Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    padding-left: 10px;
+    /*padding-left: 5px;*/
 }
 
 h2 {
     font-size: 18.72px;
+}
+
+h2, h3 {
+    text-transform: capitalize;
 }
 
 .age, .height, .weight, .gender {
@@ -16,7 +20,26 @@ input {
     width: 40px;
 }
 
-.personal-details {
+.bmr, .tdee, .new-calories {
     border: solid 1px black;
-    background-color: pink;
+    background-color: #F4DF4EFF;
+    margin: 10px 0px;
+    padding: 10px 5px;
+}
+
+.personal-details, .activity, .weight-goals {
+    border: solid 1px black;
+    background-color: #949398FF;
+    margin: 10px 0px;
+    padding: 10px 5px;
+}
+
+#goals, #activity-multiplier {
+    font-size: 11px;
+}
+
+#bmr, #tdee, #kcals {
+    font-weight: 700;
+    color: red;
+    font-size: 24px;
 }
