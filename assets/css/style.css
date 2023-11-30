@@ -1,0 +1,22 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+}
+
+h2 {
+    font-size: 18.72px;
+}
+
+.age, .height, .weight, .gender {
+    padding: 10px 5px;
+}
+
+input {
+    width: 40px;
+}
+
+.personal-details {
+    border: solid 1px black;
+    background-color: pink;
+}

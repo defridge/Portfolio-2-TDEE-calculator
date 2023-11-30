@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <title>TDEE & Macro Calculator</title>
+</head>
+<body>
+    <h1 class="heading">TDEE & Macro Calculator</h1>
+
+    <h2 class="personal-heading">Enter your details below to get started:</h2>
+    <div class="personal-details">
+        <div class="age">
+            <label for="age">Age</label>
+            <input id="age" type="text" name="age" class="text-input" required>
+        </div>
+        <div class="height">
+            <label for="height">Height in Cm's</label>
+            <input id="height" type="text" name="height" class="text-input" required>
+        </div>
+        <div class="weight">
+            <label for="weight">Weight in Kg's</label>
+            <input id="weight" type="text" name="weight" class="text-input" required>
+        </div>
+        <div class="gender">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+    </div>
+
+        <div class="bmr">
+            <h3 class="bmr-heading">Your Basal Metabolic Rate (BMR):</h3>
+            <span id="bmr">1000</span>
+        </div>
+
+        <div class="activity">
+            <h3 class="activity-heading">Activity Multiplier</h3>
+            <label for="activity-multiplier">Please choose one of the following options that best describes your level of activity:</label>
+            <select name="activity-multiplier" id="activity-multiplier">
+                <option value="sedentary">Sedentary: fewer then 5,000 steps per day</option>
+                <option value="light-active">Lightly Active: between 5,000 - 7,500 steps per day</option>
+                <option value="moderate-active">Moderately Active: between 7,500 - 10,000 steps per day</option>
+                <option value="active">Active: between 10,000 - 12,500 steps per day</option>
+                <option value="high-active">Highly Active: 12,500+ steps per day</option>
+            </select>
+        </div>
+
+        <div class="tdee">
+            <h3 class="tdee-heading">Your Total Daily Energy Expenditure (TDEE) or body weight maintenance is:</h3>
+            <p><span id="tdee">1000</span> Calories Per Day</p>
+        </div>
+
+        <div class="weight-goals">
+            <h3 class="goals-heading">Daily Calorie Allowance</h3>
+            <label for="goals">Please choose your current goal to get your new daily calorie allownace:</label>
+            <select name="weight-goals" id="goals">
+                <option value="maintenance">Maintain Current Weight</option>
+                <option value="mild-weight-loss">Mild Weight Loss (0.25kg/week)</option>
+                <option value="weight-loss">Weight Loss (0.5kg/week)</option>
+                <option value="mild-weight-gain">Mild Weight Gain (0.25kg/week)</option>
+                <option value="weight-gain">Weight Gain (0.5kg/week)</option>
+            </select> 
+        </div>
+
+        <div class="new-calories">
+            <p>Based on the goal you selected your new daily calorie allownace is <span id="kcals">1000</span></p>
+        </div>
+
+        <div class="macros">
+
+        </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
