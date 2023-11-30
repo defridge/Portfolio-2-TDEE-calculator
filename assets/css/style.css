@@ -64,6 +64,6 @@ input {
 @media screen and (min-width: 992px) {
 
     .personal-details, .activity, .weight-goals, .bmr, .tdee, .new-calories {
-            margin: 30px 200px;
+            margin: 30px 400px;
         }
 }
