@@ -79,3 +79,8 @@ document.querySelector('.submit3').addEventListener('click', function () {
         document.getElementById('kcals').innerText = Math.round(weightGainKcals);
     }
 })
+
+/*function getMacros() {
+    let macros = document.getElementsByClassName('macros');
+    macros.innerText = `This is a test!`;
+}*/
