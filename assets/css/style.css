@@ -34,6 +34,14 @@ input {
     padding: 10px 5px;
 }
 
+#macros {
+    border: solid 1px black;
+    background-color: #949398FF;
+    margin: 10px 0px;
+    padding: 10px 5px;
+    /*display: none;*/
+}
+
 #goals, #activity-multiplier {
     font-size: 11px;
 }

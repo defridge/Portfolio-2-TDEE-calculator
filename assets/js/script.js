@@ -80,7 +80,21 @@ document.querySelector('.submit3').addEventListener('click', function () {
     }
 })
 
-/*function getMacros() {
-    let macros = document.getElementsByClassName('macros');
-    macros.innerText = `This is a test!`;
-}*/
+document.querySelector('.submit4').addEventListener('click', function () {
+
+    let weight = document.getElementById('weight').value;
+    let newKcals = document.getElementById('kcals').value;
+    let protein = weight * 2.2;
+    let fat = weight * 1;
+    let carbs = (newKcals - ((protein * 4) + (fat * 9))) / 4;
+    let divContent = document.getElementById('macros');
+    divContent.innerHTML = `
+    <h3>Macro Split</h3>
+    <p>Based on the information you have already entered, here is an example split for your Carbs, Fats, and Protein macronutrients that will fit into your new daily calorie intake</p>
+    <ul>
+        <li>Protein: ${protein}g</li>
+        <li>Fats: ${fat}g</li>
+        <li>Carbs:</li>
+    </ul>`;
+    console.log(carbs);
+})
