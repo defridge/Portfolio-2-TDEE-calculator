@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--Google Fonts-->
+    <!--Google Fonts & Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,8 +14,7 @@
     <title>TDEE & Macro Calculator</title>
 </head>
 <body>
-    <h1 class="heading">TDEE & Macro Calculator</h1>
-
+    <h1 class="heading">TDEE & Macro Calculator <i class="fa fa-solid fa-calculator"></i></h1>
     <h2 class="personal-heading">Enter your details below and click submit to get started:</h2>
     <div class="personal-details">
         <div class="age">
@@ -47,7 +47,7 @@
 
         <div class="activity">
             <h3 class="activity-heading">Activity Multiplier</h3>
-            <label for="activity-multiplier">Please choose one of the following options that best describes your level of activity:</label>
+            <label for="activity-multiplier">Please choose one of the following options that best describes your level of activity and click submit:</label>
             <select name="activity-multiplier" id="activity-multiplier">
                 <option value="sedentary">Sedentary: fewer then 5000 steps per day</option>
                 <option value="light-active">Lightly Active: 5000-7500 steps per day</option>
@@ -74,7 +74,10 @@
                 <option value="weight-loss">Weight Loss (0.5kg/week)</option>
                 <option value="mild-weight-gain">Mild Weight Gain (0.25kg/week)</option>
                 <option value="weight-gain">Weight Gain (0.5kg/week)</option>
-            </select> 
+            </select>
+            <br>
+            <br>
+            <button data-type="submit" class="submit3">Submit</button>
         </div>
 
         <div class="new-calories">

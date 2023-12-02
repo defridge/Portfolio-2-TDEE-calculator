@@ -45,9 +45,17 @@ input {
 }
 
 /* Button Styles */
-.submit, .submit2 {
+.submit, .submit2, .submit3 {
     padding-left: 5px;
     font-size: large;
+}
+
+.text-input {
+    font-size: 16px;
+}
+
+#gender {
+    font-size: 16px;
 }
 
 /* Media query: Tablets and larger screens from 768px and up */
