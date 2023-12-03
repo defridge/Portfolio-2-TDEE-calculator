@@ -3,16 +3,21 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(211, 211, 211, 0.3);
 }
+
 /* Heading styles */
 h2 {
     font-size: 18.72px;
 }
 
-h2, h3 {
+h2,
+h3 {
     text-transform: capitalize;
 }
 
-.age, .height, .weight, .gender {
+.age,
+.height,
+.weight,
+.gender {
     padding: 10px 5px;
 }
 
@@ -20,14 +25,18 @@ input {
     width: 40px;
 }
 
-.bmr, .tdee, .new-calories {
+.bmr,
+.tdee,
+.new-calories {
     border: solid 1px black;
     background-color: #F4DF4EFF;
     margin: 10px 0px;
     padding: 10px 5px;
 }
 
-.personal-details, .activity, .weight-goals {
+.personal-details,
+.activity,
+.weight-goals {
     border: solid 1px black;
     background-color: #949398FF;
     margin: 10px 0px;
@@ -35,25 +44,31 @@ input {
 }
 
 #macros {
-    border: solid 1px black;
+    /*border: solid 1px black;
     background-color: #949398FF;
     margin: 10px 0px;
-    padding: 10px 5px;
-    /*display: none;*/
+    padding: 10px 5px;*/
+    
 }
 
-#goals, #activity-multiplier {
+#goals, 
+#activity-multiplier {
     font-size: 11px;
 }
 
-#bmr, #tdee, #kcals {
+#bmr,
+#tdee,
+#kcals {
     font-weight: 700;
     color: red;
     font-size: 24px;
 }
 
 /* Button Styles */
-.submit, .submit2, .submit3, .submit4 {
+.submit,
+.submit2,
+.submit3,
+.submit4 {
     padding-left: 5px;
     font-size: large;
 }
@@ -69,24 +84,44 @@ input {
 /* Media query: Tablets and larger screens from 768px and up */
 @media screen and (min-width: 768px) {
 
-    .personal-details, .activity, .weight-goals, .bmr, .tdee, .new-calories {
+    .personal-details,
+    .activity,
+    .weight-goals,
+    .bmr,
+    .tdee,
+    .new-calories {
         margin: 20px 100px;
     }
 
-    .heading, .personal-heading {
+    .heading,
+    .personal-heading {
         text-align: center;
     }
 
-    #goals, #activity-multiplier {
-            font-size: 18px;
-        }
+    #goals,
+    #activity-multiplier {
+        font-size: 18px;
+    }
+
+    #macros {
+        margin: 20px 100px;
+    }
+
 }
 
 /* Media query: Tablets and larger screens from 992px and up */
 @media screen and (min-width: 992px) {
 
-    .personal-details, .activity, .weight-goals, .bmr, .tdee, .new-calories {
-            margin: 30px 400px;
-        }
-} 
+    .personal-details,
+    .activity,
+    .weight-goals,
+    .bmr,
+    .tdee,
+    .new-calories {
+        margin: 30px 400px;
+    }
 
+    #macros {
+        margin: 30px 400px;
+    }
+}

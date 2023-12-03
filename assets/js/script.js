@@ -83,18 +83,28 @@ document.querySelector('.submit3').addEventListener('click', function () {
 document.querySelector('.submit4').addEventListener('click', function () {
 
     let weight = document.getElementById('weight').value;
-    let newKcals = document.getElementById('kcals').value;
-    let protein = weight * 2.2;
-    let fat = weight * 1;
-    let carbs = (newKcals - ((protein * 4) + (fat * 9))) / 4;
+    let newKcals = document.getElementById('kcals').innerText;
+    let protein = (newKcals * 0.3) / 4;
+    let fat = (newKcals * 0.3) / 9;
+    let carbs = (newKcals * 0.4) / 4;
     let divContent = document.getElementById('macros');
+    divContent.style.border = 'solid 1px black';
+    divContent.style.backgroundColor = '#949398FF';
+    divContent.style.margin = '10px 0px';
+    divContent.style.padding = '10px 5px';
+    
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        divContent.style.margin = '20px 100px';
+    } else if (window.matchMedia('(min-width: 992px').matches) {
+        divContent.style.margin = '30px 400px';
+    }
+
     divContent.innerHTML = `
     <h3>Macro Split</h3>
     <p>Based on the information you have already entered, here is an example split for your Carbs, Fats, and Protein macronutrients that will fit into your new daily calorie intake</p>
     <ul>
-        <li>Protein: ${protein}g</li>
-        <li>Fats: ${fat}g</li>
-        <li>Carbs:</li>
+        <li>Protein: ${Math.round(protein)}g</li>
+        <li>Fats: ${Math.round(fat)}g</li>
+        <li>Carbs ${Math.round(carbs)}g:</li>
     </ul>`;
-    console.log(carbs);
 })
