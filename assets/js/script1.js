@@ -13,6 +13,7 @@ function calcBmr() {
     } else if (gender === 'female') {
         let bmrF = (10 * weight) + (6.26 * height) - (5 * age) - 161;
         document.getElementById('bmr').innerText = bmrF;
-    }
-}
+    } 
+};
 
+function calcActivityMultiplier()
