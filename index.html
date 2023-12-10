@@ -21,34 +21,33 @@
     <h1 class="heading">TDEE & Macro Calculator <i class="fa fa-solid fa-calculator"></i></h1>
     <h2 class="personal-heading">Enter your details below and click submit to get started:</h2>
     <div class="personal-details">
-        <!--<form>-->
-            <div class="age">
-                <label for="age">Age</label>
-                <input id="age" type="number" placeholder="25" name="age" class="text-input" required>
-            </div>
-            <div class="height">
-                <label for="height">Height in Cm's</label>
-                <input id="height" type="number" placeholder="170" size="number" name="height" class="text-input" required>
-            </div>
-            <div class="weight">
-                <label for="weight">Weight in Kg's</label>
-                <input id="weight" type="number" placeholder="75" class="text-input" required>
-            </div>
-            <div class="gender">
-                <label for="gender">Gender</label>
-                <select name="gender" id="gender" required>
-                    <option value="">Gender</option>
-                    <option id="male" value="male">Male</option>
-                    <option id="female" value="female">Female</option>
-                </select>
-            </div>
-            <br>
-            <div class="btn-container">
-                <button type="submit" class="submit">Submit</button>
-                <button class="help" id="bmr-info">More Info</button>
-            </div>
-        <!--</form>-->
-
+        <div class="age">
+            <label for="age">Age</label>
+            <input id="age" type="number" placeholder="25" name="age" class="text-input" required>
+        </div>
+        <div class="height">
+            <label for="height">Height in Cm's</label>
+            <input id="height" type="number" placeholder="170" name="height" class="text-input" required>
+        </div>
+        <div class="weight">
+            <label for="weight">Weight in Kg's</label>
+            <input id="weight" type="number" placeholder="75" class="text-input" required>
+        </div>
+        <div class="gender">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" required>
+                <option value="">Gender</option>
+                <option id="male" value="male">Male</option>
+                <option id="female" value="female">Female</option>
+            </select>
+        </div>
+        <br>
+        <div class="btn-container">
+            <button type="submit" class="submit">Submit</button>
+            <button class="help" id="bmr-info">More Info</button>
+        </div>
+    </div>
+        
         <div class="bmr">
             <h3 class="bmr-heading">Your Basal Metabolic Rate (BMR):</h3>
             <p><span id="bmr">0</span> Calories Per Day</p>
