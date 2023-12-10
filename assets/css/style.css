@@ -43,14 +43,6 @@ input {
     padding: 10px 5px;
 }
 
-#macros {
-    /*border: solid 1px black;
-    background-color: #949398FF;
-    margin: 10px 0px;
-    padding: 10px 5px;*/
-    
-}
-
 #goals, 
 #activity-multiplier {
     font-size: 11px;
@@ -81,6 +73,44 @@ input {
     font-size: 16px;
 }
 
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:rgba(0, 0, 0, 0.4);;
+}
+
+/* Modal Content */
+.macro-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 80%;
+}
+
+/* Modal Close Button */
+.close {
+    color:black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Media query: Tablets and larger screens from 768px and up */
 @media screen and (min-width: 768px) {
 
@@ -102,11 +132,6 @@ input {
     #activity-multiplier {
         font-size: 18px;
     }
-
-    #macros {
-        margin: 20px 100px;
-    }
-
 }
 
 /* Media query: Tablets and larger screens from 992px and up */
@@ -118,10 +143,6 @@ input {
     .bmr,
     .tdee,
     .new-calories {
-        margin: 30px 400px;
-    }
-
-    #macros {
         margin: 30px 400px;
     }
 }
