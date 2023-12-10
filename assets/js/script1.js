@@ -1,6 +1,6 @@
-document.querySelector('.submit').addEventListener('click', calcBmr);
-document.querySelector('.submit2').addEventListener('click', calcTdee);
-document.querySelector('.submit3').addEventListener('click', calcNewKcals);
+document.getElementsByClassName('submit')[0].addEventListener('click', calcBmr);
+document.getElementsByClassName('submit2')[0].addEventListener('click', calcTdee);
+document.getElementsByClassName('submit3')[0].addEventListener('click', calcNewKcals);
 
 function calcBmr() {
     let age = parseInt(document.getElementById('age').value);
@@ -16,7 +16,7 @@ function calcBmr() {
         let bmr = (10 * weight) + (6.26 * height) - (5 * age) - 161;
         document.getElementById('bmr').innerHTML = bmr;
     }
-};
+}
 
 function calcTdee() {
     let activityMulti = document.getElementById('activity-multiplier');
@@ -39,7 +39,7 @@ function calcTdee() {
     let tdee = bmr * activityMultiplier;
     let newTdee = bmr + tdee;
     document.getElementById('tdee').innerHTML = Math.round(newTdee);
-};
+}
 
 function calcNewKcals() {
     let weightGoals = document.getElementById('goals').value;
@@ -62,7 +62,7 @@ function calcNewKcals() {
             document.getElementById('kcals').innerHTML = Math.round(tdee * 1.2);
             break;
     }
-};
+}
 
 let macroModal = document.getElementsByClassName('submit4')[0];
 let macroBtn = document.getElementsByClassName('submit3')[0];
@@ -78,7 +78,6 @@ let macroContent = document.getElementsByClassName('macro-wording')[0];
 btn.onclick = function() {
     modal.style.display = 'block';
     let newKcals = document.getElementById('kcals').innerHTML;
-    console.log(newKcals, typeof (newKcals));
     let protein = (newKcals * 0.3) / 4;
     let fat = (newKcals * 0.3) / 9;
     let carbs = (newKcals * 0.4) / 4;
