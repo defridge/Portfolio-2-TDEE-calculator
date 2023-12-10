@@ -77,13 +77,17 @@ let macroContent = document.getElementsByClassName('macro-wording')[0];
 
 btn.onclick = function() {
     modal.style.display = 'block';
-    let newKcals = document.getElementById('kcals').innerHTML;
-    let protein = (newKcals * 0.3) / 4;
-    let fat = (newKcals * 0.3) / 9;
-    let carbs = (newKcals * 0.4) / 4;
+    let newKcals = parseInt(document.getElementById('kcals').innerHTML);
+    let weight = parseInt(document.getElementById('weight').value);
+    let protein = weight * 2;
+    let fat = weight * 0.9;
+    let proteinKcal = protein * 4;
+    let fatKcal = fat * 9;
+    let carbKcal = newKcals - (proteinKcal + fatKcal);
+    let carbs = carbKcal / 4;
     macroContent.innerHTML = `
     <h3>Macro Split</h3>
-    <p>Based on the information you have already entered, here is an example split for your Carbs, Fats, and Protein macronutrients that will fit into your new daily calorie intake</p>
+    <p>Based on the information you have already entered, here is an example split for your Carbs, Fats, and Protein macronutrients that will fit into your new daily calorie intake.</p>
     <ul>
         <li>Protein: ${Math.round(protein)}g</li>
         <li>Fats: ${Math.round(fat)}g</li>

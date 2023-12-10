@@ -28,7 +28,7 @@
             </div>
             <div class="height">
                 <label for="height">Height in Cm's</label>
-                <input id="height" type="number" placeholder="170" name="height" class="text-input" required>
+                <input id="height" type="number" placeholder="170" size="number" name="height" class="text-input" required>
             </div>
             <div class="weight">
                 <label for="weight">Weight in Kg's</label>
@@ -37,16 +37,17 @@
             <div class="gender">
                 <label for="gender">Gender</label>
                 <select name="gender" id="gender" required>
-                    <option></option>
+                    <option value="">Gender</option>
                     <option id="male" value="male">Male</option>
                     <option id="female" value="female">Female</option>
                 </select>
             </div>
             <br>
-            <button type="submit" class="submit">Submit</button>
+            <div class="btn-container">
+                <button type="submit" class="submit">Submit</button>
+                <button class="help" id="bmr-info">More Info</button>
             </div>
         <!--</form>-->
-        
 
         <div class="bmr">
             <h3 class="bmr-heading">Your Basal Metabolic Rate (BMR):</h3>
@@ -65,7 +66,10 @@
             </select>
             <br>
             <br>
-            <button type="submit" class="submit2">Submit</button>
+            <div class="btn-container">
+                <button type="submit" class="submit2">Submit</button>
+                <button class="help" id="activity-info">More Info</button>
+            </div>
         </div>
 
         <div class="tdee">
@@ -85,7 +89,10 @@
             </select>
             <br>
             <br>
-            <button type="submit" class="submit3">Submit</button>
+            <div class="btn-container">
+                <button type="submit" class="submit3">Submit</button>
+                <button class="help" id="goals-info">More Info</button>
+            </div>
         </div>
 
         <div class="new-calories">
