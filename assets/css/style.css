@@ -65,6 +65,10 @@ input {
     font-size: large;
 }
 
+.submit4 {
+    display: none;
+}
+
 .text-input {
     font-size: 16px;
 }

@@ -64,11 +64,33 @@ function calcNewKcals() {
     }
 };
 
+let macroModal = document.getElementsByClassName('submit4')[0];
+let macroBtn = document.getElementsByClassName('submit3')[0];
+macroBtn.onclick = function() {
+    macroModal.style.display = 'inline';
+};
+
 let modal = document.getElementById('macros');
 let btn = document.getElementsByClassName('submit4')[0];
 let span = document.getElementsByClassName('close')[0];
+let macroContent = document.getElementsByClassName('macro-wording')[0];
+
 btn.onclick = function() {
     modal.style.display = 'block';
+    let newKcals = document.getElementById('kcals').innerHTML;
+    console.log(newKcals, typeof (newKcals));
+    let protein = (newKcals * 0.3) / 4;
+    let fat = (newKcals * 0.3) / 9;
+    let carbs = (newKcals * 0.4) / 4;
+    macroContent.innerHTML = `
+    <h3>Macro Split</h3>
+    <p>Based on the information you have already entered, here is an example split for your Carbs, Fats, and Protein macronutrients that will fit into your new daily calorie intake</p>
+    <ul>
+        <li>Protein: ${Math.round(protein)}g</li>
+        <li>Fats: ${Math.round(fat)}g</li>
+        <li>Carbs ${Math.round(carbs)}g:</li>
+    </ul>`;
+
 };
 span.onclick = function() {
     modal.style.display = 'none';
