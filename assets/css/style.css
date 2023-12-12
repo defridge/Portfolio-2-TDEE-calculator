@@ -119,12 +119,6 @@ input {
     float: right;
     font-size: 28px;
     font-weight: bold;
-
-}
-
-/*Toggle Box Styles*/
-#hidden-box1 {
-    display: none;
 }
 
 .close:hover,
@@ -133,6 +127,18 @@ input {
     text-decoration: none;
     cursor: pointer;
 }
+
+/*Toggle Box Styles*/
+#hidden-box1, #hidden-box2, #hidden-box3, #hidden-box4, #hidden-box5 {
+    display: none;
+    border: solid 1px red;
+    background-color: rgba(211,211,211);
+    margin: 10px 0px;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+
 
 /* Media query: Tablets and larger screens from 768px and up */
 @media screen and (min-width: 768px) {
