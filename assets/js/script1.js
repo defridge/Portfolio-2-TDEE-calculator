@@ -103,3 +103,15 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 };
+
+let hiddenBox = document.getElementsByClassName('help')[0];
+hiddenBox.onclick = showHide;
+
+function showHide() {
+    let hiddenDiv = document.getElementById('hidden-box1');
+    if (hiddenDiv.style.display === 'none') {
+        hiddenDiv.style.display = 'block';
+    } else {
+        hiddenDiv.style.display = 'none';
+    }
+}

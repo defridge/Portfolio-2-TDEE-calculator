@@ -47,70 +47,72 @@
             <button class="help" id="personal-info">More Info</button>
         </div>
     </div>
-        
-        <div class="bmr">
-            <h3 class="bmr-heading">Your Basal Metabolic Rate (BMR):</h3>
-            <p><span id="bmr">0</span> Calories Per Day</p>
-                <div class="info-container">
-                    <button class="help" id="bmr-info">How's This Calculated?</button>
-                </div>
-        </div>
-
-        <div class="activity">
-            <h3 class="activity-heading">Activity Multiplier</h3>
-            <label for="activity-multiplier">Please choose one of the following options that best describes your level of activity and click submit:</label>
-            <select name="activity-multiplier" id="activity-multiplier">
-                <option value="sedentary">Sedentary: fewer then 5000 steps per day</option>
-                <option value="light-active">Lightly Active: 5000-7500 steps per day</option>
-                <option value="moderate-active">Moderately Active: 7500-10000 steps per day</option>
-                <option value="active">Active: 10000-12500 steps per day</option>
-                <option value="high-active">Highly Active: 12500+ steps per day</option>
-            </select>
-            <br>
-            <br>
-            <div class="btn-container">
-                <button type="submit" class="submit2">Submit</button>
-                <button class="help" id="activity-info">More Info</button>
-            </div>
-        </div>
-
-        <div class="tdee">
-            <h3 class="tdee-heading">Your Total Daily Energy Expenditure (TDEE) or body weight maintenance is:</h3>
-            <p><span id="tdee">0</span> Calories Per Day</p>
+    <div id="hidden-box1">
+        <p>This is a test</p>
+    </div>
+    <div class="bmr">
+        <h3 class="bmr-heading">Your Basal Metabolic Rate (BMR):</h3>
+        <p><span id="bmr">0</span> Calories Per Day</p>
             <div class="info-container">
-                <button class="help" id="tdee-info">How's This Calculated?</button>
+                <button class="help" id="bmr-info">How's This Calculated?</button>
             </div>
-        </div>
+    </div>
 
-        <div class="weight-goals">
-            <h3 class="goals-heading">Daily Calorie Allowance</h3>
-            <label for="goals">Please choose your current goal and click submit to get your new daily calorie allownace:</label>
-            <select name="weight-goals" id="goals">
-                <option value="maintenance">Maintain Current Weight</option>
-                <option value="mild-weight-loss">Mild Weight Loss (0.25kg/week)</option>
-                <option value="weight-loss">Weight Loss (0.5kg/week)</option>
-                <option value="mild-weight-gain">Mild Weight Gain (0.25kg/week)</option>
-                <option value="weight-gain">Weight Gain (0.5kg/week)</option>
-            </select>
-            <br>
-            <br>
-            <div class="btn-container">
-                <button type="submit" class="submit3">Submit</button>
-                <button class="help" id="goals-info">More Info</button>
-            </div>
+    <div class="activity">
+        <h3 class="activity-heading">Activity Multiplier</h3>
+        <label for="activity-multiplier">Please choose one of the following options that best describes your level of activity and click submit:</label>
+        <select name="activity-multiplier" id="activity-multiplier">
+            <option value="sedentary">Sedentary: fewer then 5000 steps per day</option>
+            <option value="light-active">Lightly Active: 5000-7500 steps per day</option>
+            <option value="moderate-active">Moderately Active: 7500-10000 steps per day</option>
+            <option value="active">Active: 10000-12500 steps per day</option>
+            <option value="high-active">Highly Active: 12500+ steps per day</option>
+        </select>
+        <br>
+        <br>
+        <div class="btn-container">
+            <button type="submit" class="submit2">Submit</button>
+            <button class="help" id="activity-info">More Info</button>
         </div>
+    </div>
 
-        <div class="new-calories">
-            <p>Based on the goal you selected your new daily calorie allownace is: <span id="kcals">0</span></p>
-            <button class="submit4">Click here for example Macro's</button>
+    <div class="tdee">
+        <h3 class="tdee-heading">Your Total Daily Energy Expenditure (TDEE) or body weight maintenance is:</h3>
+        <p><span id="tdee">0</span> Calories Per Day</p>
+        <div class="info-container">
+            <button class="help" id="tdee-info">How's This Calculated?</button>
         </div>
+    </div>
 
-        <div id="macros" class="modal">
-            <div class="macro-content">
-                <span class="close">X</span>
-                <div class="macro-wording"></div>
-            </div>
+    <div class="weight-goals">
+        <h3 class="goals-heading">Daily Calorie Allowance</h3>
+        <label for="goals">Please choose your current goal and click submit to get your new daily calorie allownace:</label>
+        <select name="weight-goals" id="goals">
+            <option value="maintenance">Maintain Current Weight</option>
+            <option value="mild-weight-loss">Mild Weight Loss (0.25kg/week)</option>
+            <option value="weight-loss">Weight Loss (0.5kg/week)</option>
+            <option value="mild-weight-gain">Mild Weight Gain (0.25kg/week)</option>
+            <option value="weight-gain">Weight Gain (0.5kg/week)</option>
+        </select>
+        <br>
+        <br>
+        <div class="btn-container">
+            <button type="submit" class="submit3">Submit</button>
+            <button class="help" id="goals-info">More Info</button>
         </div>
+    </div>
+
+    <div class="new-calories">
+        <p>Based on the goal you selected your new daily calorie allownace is: <span id="kcals">0</span></p>
+        <button class="submit4">Click here for example Macro's</button>
+    </div>
+
+    <div id="macros" class="modal">
+        <div class="modal-content">
+            <span class="close">X</span>
+            <div class="macro-wording"></div>
+        </div>
+    </div>
 
     
     <script src="assets/js/script1.js"></script>

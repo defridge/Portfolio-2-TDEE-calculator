@@ -105,7 +105,7 @@ input {
 }
 
 /* Modal Content */
-.macro-content {
+.modal-content {
     background-color: white;
     margin: 15% auto;
     padding: 20px;
@@ -120,6 +120,11 @@ input {
     font-size: 28px;
     font-weight: bold;
 
+}
+
+/*Toggle Box Styles*/
+#hidden-box1 {
+    display: none;
 }
 
 .close:hover,
