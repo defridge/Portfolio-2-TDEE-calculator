@@ -14,6 +14,7 @@ h3 {
     text-transform: capitalize;
 }
 
+/* Content Div Styles */
 .age,
 .height,
 .weight,
@@ -131,6 +132,11 @@ input {
 /* List Styles */
 ul {
     padding-inline-start: 10px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
 }
 
 /*Toggle Box Styles*/
