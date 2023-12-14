@@ -1,110 +1,132 @@
-document.querySelector('.submit').addEventListener('click', function() {
+// Event listeners that will run functions when a button is clicked
+document.getElementsByClassName('submit')[0].addEventListener('click', calcBmr);
+document.getElementsByClassName('submit2')[0].addEventListener('click', calcTdee);
+document.getElementsByClassName('submit3')[0].addEventListener('click', calcNewKcals);
 
-    let age = document.getElementById('age').value;
-    let height = document.getElementById('height').value;
-    let weight = document.getElementById('weight').value;
+// Function for calculating BMR based on input values
+function calcBmr() {
+    let age = parseInt(document.getElementById('age').value);
+    let height = parseInt(document.getElementById('height').value);
+    let weight = parseInt(document.getElementById('weight').value);
     let genderSelect = document.getElementById('gender');
     let gender = genderSelect.options[genderSelect.selectedIndex].value;
 
     if (gender === 'male') {
-        let bmrM = (10 * weight) + (6.25 * height) - (5 * age) + 5;
-        document.getElementById('bmr').innerText = bmrM;
+        let bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+        document.getElementById('bmr').innerHTML = bmr;
     } else if (gender === 'female') {
-        let bmrF = (10 * weight) + (6.26 * height) - (5 * age) - 161;
-        document.getElementById('bmr').innerText = bmrF;
-    } 
-});
+        let bmr = (10 * weight) + (6.26 * height) - (5 * age) - 161;
+        document.getElementById('bmr').innerHTML = bmr;
+    }
+}
 
-document.querySelector('.submit2').addEventListener('click', function() {
-
+// Function to calculate TDEE 
+function calcTdee() {
     let activityMulti = document.getElementById('activity-multiplier');
     let activityOption = activityMulti.options[activityMulti.selectedIndex].value;
+    let bmr = parseInt(document.getElementById('bmr').innerHTML);
 
+    let activityMultiplier;
     if (activityOption === 'sedentary') {
-        let bmr = document.getElementById('bmr').innerText;
-        let sedentary = bmr * 0.2;
-        let sedentaryTdee = parseFloat(bmr) + parseFloat(sedentary);
-        document.getElementById('tdee').innerText = Math.round(sedentaryTdee);
+        activityMultiplier = 0.2;
     } else if (activityOption === 'light-active') {
-        let bmr = document.getElementById('bmr').innerText;
-        let light = bmr * 0.37;
-        let lightTdee = parseFloat(bmr) + parseFloat(light);
-        document.getElementById('tdee').innerText = Math.round(lightTdee);
+        activityMultiplier = 0.37;
     } else if (activityOption === 'moderate-active') {
-        let bmr = document.getElementById('bmr').innerText;
-        let moderate = bmr * 0.55;
-        let moderateTdee = parseFloat(bmr) + parseFloat(moderate);
-        document.getElementById('tdee').innerText = Math.round(moderateTdee);
+        activityMultiplier = 0.55;
     } else if (activityOption === 'active') {
-        let bmr = document.getElementById('bmr').innerText;
-        let active = bmr * 0.72;
-        let activeTdee = parseFloat(bmr) + parseFloat(active);
-        document.getElementById('tdee').innerText = Math.round(activeTdee);
+        activityMultiplier = 0.72;
     } else if (activityOption === 'high-active') {
-        let bmr = document.getElementById('bmr').innerText;
-        let highActive = bmr * 0.9;
-        let highActiveTdee = parseFloat(bmr) + parseFloat(highActive);
-        document.getElementById('tdee').innerText = Math.round(highActiveTdee);
-    }
-});
-
-document.querySelector('.submit3').addEventListener('click', function () {
-
-    let weightGoals = document.getElementById('goals');
-    let goals = weightGoals.options[weightGoals.selectedIndex].value;
-
-    if (goals === 'maintenance') {
-        let tdee = document.getElementById('tdee').innerText;
-        let maintenance = tdee;
-        document.getElementById('kcals').innerText = maintenance;
-    } else if (goals === 'mild-weight-loss') {
-        let tdee = document.getElementById('tdee').innerText;
-        let mildWeight = tdee * 0.2;
-        let mildWeightKcals = parseFloat(tdee) - parseFloat(mildWeight);
-        document.getElementById('kcals').innerText = Math.round(mildWeightKcals);
-    } else if (goals === 'weight-loss') {
-        let tdee = document.getElementById('tdee').innerText;
-        let weightLoss = tdee * 0.3;
-        let weightLossKcals = parseFloat(tdee) - parseFloat(weightLoss);
-        document.getElementById('kcals').innerText = Math.round(weightLossKcals);
-    } else if (goals === 'mild-weight-gain') {
-        let tdee = document.getElementById('tdee').innerText;
-        let mildWeightGain = tdee * 0.1;
-        let mildWeightGainKcals = parseFloat(tdee) + parseFloat(mildWeightGain);
-        document.getElementById('kcals').innerText = Math.round(mildWeightGainKcals);
-    } else if (goals === 'weight-gain') {
-        let tdee = document.getElementById('tdee').innerText;
-        let weightGain = tdee * 0.2;
-        let weightGainKcals = parseFloat(tdee) + parseFloat(weightGain);
-        document.getElementById('kcals').innerText = Math.round(weightGainKcals);
-    }
-})
-
-document.querySelector('.submit4').addEventListener('click', function () {
-
-    let weight = document.getElementById('weight').value;
-    let newKcals = document.getElementById('kcals').innerText;
-    let protein = (newKcals * 0.3) / 4;
-    let fat = (newKcals * 0.3) / 9;
-    let carbs = (newKcals * 0.4) / 4;
-    let divContent = document.getElementById('macros');
-    divContent.style.border = 'solid 1px black';
-    divContent.style.backgroundColor = '#949398FF';
-    divContent.style.margin = '10px 0px';
-    divContent.style.padding = '10px 5px';
-    
-    if (window.matchMedia('(min-width: 768px)').matches) {
-        divContent.style.margin = '20px 100px';
-    } else if (window.matchMedia('(min-width: 992px').matches) {
-        divContent.style.margin = '30px 400px';
+        activityMultiplier = 0.9;
     }
 
-    divContent.innerHTML = `
+    let tdee = bmr * activityMultiplier;
+    let newTdee = bmr + tdee;
+    document.getElementById('tdee').innerHTML = Math.round(newTdee);
+}
+
+// Function to calculate new kcals dependent on goals
+function calcNewKcals() {
+    let weightGoals = document.getElementById('goals').value;
+    let tdee = parseFloat(document.getElementById('tdee').innerHTML);
+
+    switch (weightGoals) {
+        case 'maintenance' :
+            document.getElementById('kcals').innerHTML = tdee;
+            break;
+        case 'mild-weight-loss' :
+            document.getElementById('kcals').innerHTML = Math.round(tdee * 0.8);
+            break;
+        case 'weight-loss' :
+            document.getElementById('kcals').innerHTML = Math.round(tdee * 0.7);
+            break;
+        case 'mild-weight-gain' :
+            document.getElementById('kcals').innerHTML = Math.round(tdee * 1.1);
+            break;
+        case 'weight-gain' :
+            document.getElementById('kcals').innerHTML = Math.round(tdee * 1.2);
+            break;
+    }
+}
+
+// Code to display modal box
+let macroModal = document.getElementsByClassName('submit4')[0];
+let macroBtn = document.getElementsByClassName('submit3')[0];
+macroBtn.onclick = function() {
+    macroModal.style.display = 'inline';
+};
+
+let modal = document.getElementById('macros');
+let btn = document.getElementsByClassName('submit4')[0];
+let span = document.getElementsByClassName('close')[0];
+let macroContent = document.getElementsByClassName('macro-wording')[0];
+
+// Function to calculate macros and add content to modal box
+btn.onclick = function() {
+    modal.style.display = 'block';
+    let newKcals = parseInt(document.getElementById('kcals').innerHTML);
+    let weight = parseInt(document.getElementById('weight').value);
+    let protein = weight * 2;
+    let fat = weight * 0.9;
+    let proteinKcal = protein * 4;
+    let fatKcal = fat * 9;
+    let carbKcal = newKcals - (proteinKcal + fatKcal);
+    let carbs = carbKcal / 4;
+    macroContent.innerHTML = `
     <h3>Macro Split</h3>
-    <p>Based on the information you have already entered, here is an example split for your Carbs, Fats, and Protein macronutrients that will fit into your new daily calorie intake</p>
+    <p>Based on the information you have already entered, here is an example split for your Carbs, Fats, and Protein macronutrients that will fit into your new daily calorie intake.</p>
     <ul>
         <li>Protein: ${Math.round(protein)}g</li>
         <li>Fats: ${Math.round(fat)}g</li>
         <li>Carbs ${Math.round(carbs)}g:</li>
     </ul>`;
-})
+
+};
+
+// Code to remove modal box when clicking on the X or anywhere on the page
+span.onclick = function() {
+    modal.style.display = 'none';
+};
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+};
+
+// Grabs buttons with Help class and loops through them
+let buttons = document.getElementsByClassName('help');
+
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+        showHide('hidden-box' + (i + 1));
+    });
+}
+
+// Shows div when button is clicked
+function showHide(targetId) {
+    let hiddenDiv = document.getElementById(targetId);
+    if (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') {
+        hiddenDiv.style.display = 'block';
+    } else {
+        hiddenDiv.style.display = 'none';
+    }
+}
