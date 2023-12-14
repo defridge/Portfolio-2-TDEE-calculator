@@ -49,10 +49,10 @@
     </div>
     <div id="hidden-box1">
         <p> Please enter your details in the boxes provided above.</p>
-        <p>Your <b>Age,</b> <b>Height</b> in centimeters and <b>Weight</b> in kg shoulde be enterend in numerical values and then select your gender.</p>
+        <p>Your <b>Age,</b> <b>Height</b> in centimetres and <b>Weight</b> in kg should be entered in numerical values and then select your gender.</p>
         <P>Using this information we can calculate your <b>Basal Metabolic Rate (BMR)</b> also known as your resting metabolic rate which is how many calories your body uses at rest.</P>
         <p>You can use the link below to convert your height and weight into the units of measurements needed.</p>
-        <a href ="https://www.thecalculatorsite.com/" target="_blank" alt="Link to unit converter website">The Calculator Site</a>
+        <a href ="https://www.thecalculatorsite.com/" target="_blank">The Calculator Site</a>
     </div>
     <div class="bmr">
         <h3 class="bmr-heading">Your Basal Metabolic Rate (BMR):</h3>
@@ -66,7 +66,6 @@
         <p>Here is how to figure is calculated:</p>
         <ul>
             <li>Male: BMR = (10 x Weight) + (6.25 x Height) - (5 x Age) + 5</li>
-            <br>
             <li>Female: BMR = (10 x Weight) + (6.25 x Height) - (5 x Age) - 161</li>
         </ul>
     </div>
@@ -75,7 +74,7 @@
         <h3 class="activity-heading">Activity Multiplier</h3>
         <label for="activity-multiplier">Please choose one of the following options that best describes your level of activity and click submit:</label>
         <select name="activity-multiplier" id="activity-multiplier">
-            <option value="sedentary">Sedentary: fewer then 5000 steps per day</option>
+            <option value="sedentary">Sedentary: fewer than 5000 steps per day</option>
             <option value="light-active">Lightly Active: 5000-7500 steps per day</option>
             <option value="moderate-active">Moderately Active: 7500-10000 steps per day</option>
             <option value="active">Active: 10000-12500 steps per day</option>
@@ -90,8 +89,8 @@
     </div>
     <div id="hidden-box3">
         <p>In this section we will try to find out how many calories you use throughout the day when we factor in your activity.</p>
-        <p>Using the dropdown options select which ever best decribes how much movement you generally do.</p>
-        <p><i>If your goal is weight loss its better to underestimate on this section rather then overestimate.</i></p>
+        <p>Using the dropdown options select whichever best describes how much movement you generally do.</p>
+        <p><i>If your goal is weight loss it's better to underestimate on this section rather than overestimate.</i></p>
     </div>
 
     <div class="tdee">
@@ -102,12 +101,21 @@
         </div>
     </div>
     <div id="hidden-box4">
-        <p>This is a test</p>
+        <p>Here we have your TDEE which stands for your <b>Total Daily Energy Expenditure.</b></p>
+        <p>This figure is calculated based on what you selected as your activity multiplier.</p>
+        <p>Depending on your choice your BMR is multiplied by a numerical factor:</p>
+        <ul>
+            <li>Sedentary = BMR x 0.2</li>
+            <li>Lightly Active = BMR x 0.37</li>
+            <li>Moderately Active = BMR x 0.55</li>
+            <li>Active = BMR x 0.72</li>
+            <li>Highly Active = BMR x 0.9</li>
+        </ul>
     </div>
 
     <div class="weight-goals">
         <h3 class="goals-heading">Daily Calorie Allowance</h3>
-        <label for="goals">Please choose your current goal and click submit to get your new daily calorie allownace:</label>
+        <label for="goals">Please choose your current goal and click submit to get your new daily calorie allowance:</label>
         <select name="weight-goals" id="goals">
             <option value="maintenance">Maintain Current Weight</option>
             <option value="mild-weight-loss">Mild Weight Loss (0.25kg/week)</option>
@@ -123,12 +131,15 @@
         </div>
     </div>
     <div id="hidden-box5">
-        <p>This is a test</p>
+        <p>In this last step we need to adjust your TDEE calories to suit your goals.</p>
+        <p>If you are looking to lose weight then your TDEE will be reduced by 20%-30% to allow for a calorie deficit.</p>
+        <p>If the goal is weight gain we would increase your calories by 10%-20% to allow for a calorie surplus.</p>
+        <p><em>Please note this is just to give you a good estimate for a starting point and depending on how your weight responds these calories may need to be adjusted as you go.</em></p>
     </div>
 
     <div class="new-calories">
-        <p>Based on the goal you selected your new daily calorie allownace is: <span id="kcals">0</span></p>
-        <button class="submit4">Click here for example Macro's</button>
+        <p>Based on the goal you selected your new daily calorie allowance is: <span id="kcals">0</span></p>
+        <button class="submit4">Click here for example Macros</button>
     </div>
 
     <div id="macros" class="modal">
