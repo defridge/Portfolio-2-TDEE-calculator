@@ -1,39 +1,40 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# TDEE & Macro Calculator
 
-Welcome,
+The TDEE & Macro Calculator page was created to take the guess work out of calories when it comes to dieting or muscle building. Simply enter some basic information and the page will work out, step by step how many caloires you will need to reach your goal as well as give you an example split to your macros that will fit your new calorie target. You can visit the live site here: [TDEE & Macro Calculator](https://defridge.github.io/Portfolio-2-TDEE-calculator/)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive Mockup](assets/images/mockup.webp)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
 
-## Codeanywhere Reminders
+## Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
-`python3 -m http.server`
+## Technologies
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- HTML
+  - The webpage structure was created using HTML as the main language.
+- CSS
+  - The styling of the website was done using custome CSS saved in an external file.
+- JAVASCRIPT
+  - JAVASCRIPT was used to the develop the dynamic features of the website, such as calculating BMR and displaying output.
+- IDE
+  - The website was developed using Codeanywhere IDE.
+- Github
+  - The source code is hosted on Github and deployed using Git Pages.
+- Git
+  - Git was used to commit and push code during the project.
+- Favicon.io
+  - Favicon files were created at [favicon.io](https://favicon.io/favicon-converter/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
 
-`http_server`
+## Testing
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Responsiveness
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- The website was tested on various screen sizes from Galaxy Fold 280px upwards and is responsive and functions as intended.
+- To test this the webpage was loaded in a browser and using Google Dev Tools was changed to 280px and then the responsive window was dragged to max size.
+- The webpage responded as intended.
+- Some devices the website was tested on outside of Dev Tools were: Iphone 11, Samsung A6, Macbook Air, HP M27fw FHD monitor.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Accessibility
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
