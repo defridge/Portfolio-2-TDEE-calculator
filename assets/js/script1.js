@@ -1,7 +1,9 @@
+// Event listeners that will run functions when a button is clicked
 document.getElementsByClassName('submit')[0].addEventListener('click', calcBmr);
 document.getElementsByClassName('submit2')[0].addEventListener('click', calcTdee);
 document.getElementsByClassName('submit3')[0].addEventListener('click', calcNewKcals);
 
+// Function for calculating BMR based on input values
 function calcBmr() {
     let age = parseInt(document.getElementById('age').value);
     let height = parseInt(document.getElementById('height').value);
@@ -18,6 +20,7 @@ function calcBmr() {
     }
 }
 
+// Function to calculate TDEE 
 function calcTdee() {
     let activityMulti = document.getElementById('activity-multiplier');
     let activityOption = activityMulti.options[activityMulti.selectedIndex].value;
@@ -41,6 +44,7 @@ function calcTdee() {
     document.getElementById('tdee').innerHTML = Math.round(newTdee);
 }
 
+// Function to calculate new kcals dependent on goals
 function calcNewKcals() {
     let weightGoals = document.getElementById('goals').value;
     let tdee = parseFloat(document.getElementById('tdee').innerHTML);
@@ -64,6 +68,7 @@ function calcNewKcals() {
     }
 }
 
+// Code to display modal box
 let macroModal = document.getElementsByClassName('submit4')[0];
 let macroBtn = document.getElementsByClassName('submit3')[0];
 macroBtn.onclick = function() {
@@ -75,6 +80,7 @@ let btn = document.getElementsByClassName('submit4')[0];
 let span = document.getElementsByClassName('close')[0];
 let macroContent = document.getElementsByClassName('macro-wording')[0];
 
+// Function to calculate macros and add content to modal box
 btn.onclick = function() {
     modal.style.display = 'block';
     let newKcals = parseInt(document.getElementById('kcals').innerHTML);
@@ -95,6 +101,8 @@ btn.onclick = function() {
     </ul>`;
 
 };
+
+// Code to remove modal box when clicking on the X or anywhere on the page
 span.onclick = function() {
     modal.style.display = 'none';
 };
@@ -104,6 +112,7 @@ window.onclick = function(event) {
     }
 };
 
+// Grabs buttons with Help class and loops through them
 let buttons = document.getElementsByClassName('help');
 
 for (let i = 0; i < buttons.length; i++) {
@@ -112,6 +121,7 @@ for (let i = 0; i < buttons.length; i++) {
     });
 }
 
+// Shows div when button is clicked
 function showHide(targetId) {
     let hiddenDiv = document.getElementById(targetId);
     if (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') {
