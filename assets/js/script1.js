@@ -104,18 +104,6 @@ window.onclick = function(event) {
     }
 };
 
-// let hiddenBox = document.getElementsByClassName('help')[0];
-// hiddenBox.onclick = showHide;
-
-// function showHide() {
-//     let hiddenDiv = document.getElementById('hidden-box1');
-//     if (hiddenDiv.style.display === 'none') {
-//         hiddenDiv.style.display = 'block';
-//     } else {
-//         hiddenDiv.style.display = 'none';
-//     }
-// }
-
 let buttons = document.getElementsByClassName('help');
 
 for (let i = 0; i < buttons.length; i++) {

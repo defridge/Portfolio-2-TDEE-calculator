@@ -128,6 +128,11 @@ input {
     cursor: pointer;
 }
 
+/* List Styles */
+ul {
+    padding-inline-start: 10px;
+}
+
 /*Toggle Box Styles*/
 #hidden-box1, #hidden-box2, #hidden-box3, #hidden-box4, #hidden-box5 {
     display: none;
@@ -161,6 +166,16 @@ input {
     #activity-multiplier {
         font-size: 18px;
     }
+
+        /*Toggle Box Styles*/
+        #hidden-box1,
+        #hidden-box2,
+        #hidden-box3,
+        #hidden-box4,
+        #hidden-box5 {
+            display: none;
+            margin: 20px 100px;
+        }
 }
 
 /* Media query: Tablets and larger screens from 992px and up */
@@ -172,6 +187,16 @@ input {
     .bmr,
     .tdee,
     .new-calories {
+        margin: 30px 400px;
+    }
+
+    /*Toggle Box Styles*/
+    #hidden-box1,
+    #hidden-box2,
+    #hidden-box3,
+    #hidden-box4,
+    #hidden-box5 {
+        display: none;
         margin: 30px 400px;
     }
 }
