@@ -11,6 +11,12 @@ function calcBmr() {
     let genderSelect = document.getElementById('gender');
     let gender = genderSelect.options[genderSelect.selectedIndex].value;
 
+    // Will throw alert if any input fields are emply
+    if (!age || !height || !weight || !gender) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
     if (gender === 'male') {
         let bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
         document.getElementById('bmr').innerHTML = bmr;

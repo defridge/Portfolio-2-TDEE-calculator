@@ -23,7 +23,7 @@ h3 {
 }
 
 input {
-    width: 40px;
+    width: 45px;
 }
 
 .bmr,
@@ -55,7 +55,7 @@ input {
 #tdee,
 #kcals {
     font-weight: 700;
-    color: red;
+    color: #BD0000;
     font-size: 24px;
 }
 
