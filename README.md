@@ -2,7 +2,7 @@
 
 The TDEE & Macro Calculator page was created to take the guess work out of calories when it comes to dieting or muscle building. Simply enter some basic information and the page will work out, step by step how many caloires you will need to reach your goal as well as give you an example split to your macros that will fit your new calorie target. You can visit the live site here: [TDEE & Macro Calculator](https://defridge.github.io/Portfolio-2-TDEE-calculator/)
 
-![Responsive Mockup](assets/images/mockup.webp)
+![Responsive Mockup](docs/readme_images/mockup.webp)
 
 
 ## Features

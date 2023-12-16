@@ -56,19 +56,19 @@ function calcNewKcals() {
     let tdee = parseFloat(document.getElementById('tdee').innerHTML);
 
     switch (weightGoals) {
-        case 'maintenance' :
+        case 'maintenance':
             document.getElementById('kcals').innerHTML = tdee;
             break;
-        case 'mild-weight-loss' :
+        case 'mild-weight-loss':
             document.getElementById('kcals').innerHTML = Math.round(tdee * 0.8);
             break;
-        case 'weight-loss' :
+        case 'weight-loss':
             document.getElementById('kcals').innerHTML = Math.round(tdee * 0.7);
             break;
-        case 'mild-weight-gain' :
+        case 'mild-weight-gain':
             document.getElementById('kcals').innerHTML = Math.round(tdee * 1.1);
             break;
-        case 'weight-gain' :
+        case 'weight-gain':
             document.getElementById('kcals').innerHTML = Math.round(tdee * 1.2);
             break;
     }
@@ -77,7 +77,7 @@ function calcNewKcals() {
 // Code to display modal box
 let macroModal = document.getElementsByClassName('submit4')[0];
 let macroBtn = document.getElementsByClassName('submit3')[0];
-macroBtn.onclick = function() {
+macroBtn.onclick = function () {
     macroModal.style.display = 'inline';
 };
 
@@ -87,7 +87,7 @@ let span = document.getElementsByClassName('close')[0];
 let macroContent = document.getElementsByClassName('macro-wording')[0];
 
 // Function to calculate macros and add content to modal box
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = 'block';
     let newKcals = parseInt(document.getElementById('kcals').innerHTML);
     let weight = parseInt(document.getElementById('weight').value);
@@ -109,10 +109,10 @@ btn.onclick = function() {
 };
 
 // Code to remove modal box when clicking on the X or anywhere on the page
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = 'none';
 };
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = 'none';
     }
@@ -122,7 +122,7 @@ window.onclick = function(event) {
 let buttons = document.getElementsByClassName('help');
 
 for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function() {
+    buttons[i].addEventListener('click', function () {
         showHide('hidden-box' + (i + 1));
     });
 }
