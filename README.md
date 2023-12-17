@@ -4,7 +4,6 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 
 ![Responsive Mockup](docs/readme_images/mockup.webp)
 
-
 ## Features
 
 ### Site Wide
@@ -78,8 +77,23 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 - More info Button example content.
 ![More Info Button Example](docs/readme_images/infobutton_example.png)
 
+- Hows This Calculated Buttons
+  - There are 2 hows this calculated buttons on the page in different sections which when clicked will display a new box containing more infomation about how the calculations that are running in the backfround are executed.
 
+![Hows This Calculated Buttons](docs/readme_images/calculated.png)
 
+- Hows this calculated button example content.
+![Hows This Calculated Button Example](docs/readme_images/calculated_example.png)
+
+- Modal Box and Button
+  - Once the final submit button has been clicked and the final calculation has been run showing the new daily calorie allowance a new clickable button will appear with the wording "click here for example macros".
+  - When the user clicks this button a modal box will show on screen with an example breakdown of protein, carbs, and fats ratios that will fix into the new calorie target.
+  - These macros are specifc to the final calorie amount and the users weight.
+
+![Modal Button](docs/readme_images/modal_button.png)
+
+- Modal Box Content Example
+![Modal Box Content](docs/readme_images/modal_example.png)
 
 ## Technologies
 
@@ -98,7 +112,6 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 - Favicon.io
   - Favicon files were created at [favicon.io](https://favicon.io/favicon-converter/)
 
-
 ## Testing
 
 ### Responsiveness
@@ -110,4 +123,100 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 
 ### Accessibility
 
+- [Wave Accessibility](https://wave.webaim.org/) was used to test accessibility on the final deployed website.
+- All pages tested and no Errors were found.
+- Colour contrasts meet a minimum ratio.
+- Heading levels are present and not skipped to ensure the importance of content.
+- All labels or aria-labels are in place so that it is read out loud on a screen reader.
+- All images have alt labels that will display if the image does not load.
 
+![Wave Testing](docs/readme_images/wave.webp)
+
+### Lighthouse Testing
+
+![Lighthouse Testing](docs/readme_images/lighthouse.webp)
+
+### Functional Testing
+
+- Footer Email link
+  - When the user clicks on the email address set in the footer on any device the email application of said device opens in a new email tab.
+  - The link works as intended.
+
+- User Input Fields
+  - In the first section of the page the user is required to fill in 3 input boxes and choose 1 of 2 options from a drop down menue, they are:
+    - Age
+    - Height in Cm's
+    - Weight in Kg's
+    - Gender
+- If the user leaves any 1 of these input fields blank or negelcts to choose a gender then when they click submit an alert will show in the broswer asking them to complete all fields and they will not be able to continue unless done so.
+
+![Alert Message](docs/readme_images/alert.png)
+
+- User Input Field Test 1
+  - The first test conducted was to leave all fields blank and to try click submit.
+  - Result: Alert showed in broswer.
+  - Validation worked as intended.
+
+![Blank Input Fields](docs/readme_images/blank_input.png)
+
+- User Input Field Test 2
+  - The secound test conducted was to fill in 1 input field, in this case Age and to try click submit.
+  - Result: Alert showed in broswer.
+  - Validation worked as intended.
+
+![Age Input Field](docs/readme_images/age_input.png)
+
+- User Input Field Test 3
+  - The third test conducted was to fill in 1 input field, in this case Height and to try click submit.
+  - Result: Alert showed in broswer.
+  - Validation worked as intended.
+
+![Height Input Field](docs/readme_images/height_input.png)
+
+- User Input Field Test 4
+  - The fourth test conducted was to fill in 1 input field, in this case Weight and to try click submit.
+  - Result: Alert showed in broswer.
+  - Validation worked as intended.
+
+![Weight Input Field](docs/readme_images/weight_input.png)
+
+- User Input Field Test 5
+  - The fifth test conducted was to click 1 option in gender dropdown and leave all other fields blank, in this case Male and to try click submit.
+  - Result: Alert showed in broswer.
+  - Validation worked as intended.
+
+![Gender Dropdown Test](docs/readme_images/gender_input.png)
+
+- User Input Field Test 5
+  - The sixth test conducted was to fill in a combination of input fields but always leaving 1 blank, in the image below Weight is left blank.
+  - This test was run with every conbination and the result was always the same.
+  - Result: Alert showed in broswer.
+  - Validation worked as intended.
+
+![Multiple Input Fields Test](docs/readme_images/multi_input.png)
+
+- Submit Button Testing
+  - All submit buttons on the website were tested and function as intended.
+
+- More Info Button Testing
+  - All more info buttons on the website were tested and function as intended.
+
+- Hows This Calculated Button Testing
+  - All hows this calculated buttons on the website were tested and function as intended.
+
+- Javascript Code and Maths Testing Case Study
+  - Once confirmed that all buttons and validations were working as intended the calculations run by the javascript code was tested to ensure is was working and to test accuracy of results.
+  - For this case study we take a fake user and run through the different stages of the page.
+  - Fake user "Bruce Wayne" details:
+    - Age 30
+    - Height 180cm
+    - Weight 80kg
+    - Gender Male
+    - Lightly Active
+    - Wants to lose weight
+
+![Case Study Calculations](docs/readme_images/case_study_calcs.png)
+
+- When compared to calculations done step by step by hand the webpage produces the same results and functions as intended.
+
+![Case Study Website](docs/readme_images/case_study_website.png)
