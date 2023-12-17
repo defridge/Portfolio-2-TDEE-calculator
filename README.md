@@ -1,6 +1,6 @@
 # TDEE & Macro Calculator
 
-The TDEE & Macro Calculator page was created to take the guess work out of calories when it comes to dieting or muscle building. Simply enter some basic information and the page will work out, step by step how many caloires you will need to reach your goal as well as give you an example split to your macros that will fit your new calorie target. You can visit the live site here: [TDEE & Macro Calculator](https://defridge.github.io/Portfolio-2-TDEE-calculator/)
+The TDEE & Macro Calculator page was created to take the guesswork out of calories when it comes to dieting or muscle building. Simply enter some basic information and the page will work out, step by step how many calories you will need to reach your goal as well as give you an example split to your macros that will fit your new calorie target. You can visit the live site here: [TDEE & Macro Calculator](https://defridge.github.io/Portfolio-2-TDEE-calculator/)
 
 ![Responsive Mockup](docs/readme_images/mockup.webp)
 
@@ -11,7 +11,7 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 - The site is made up of a single page broken into different sections.
 
 - Header
-  - Simple header design consiting of site name some instructions to get started.
+  - Simple header design consisting of a site name and some instructions to get started.
 
 ![Header](docs/readme_images/Header.png)
 
@@ -39,11 +39,11 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
     - Active: 10000-12500 steps per day
     - Highly Active: 12500+ steps per day
 
-![Activity Muliplier](docs/readme_images/activity_multi.png)
+![Activity Multiplier](docs/readme_images/activity_multi.png)
 
 - TDEE
-  - Once the user has selected an activity mulitplier their TDEE (total daily energy expenditure) will be displayed in this area.
-  - The TDEE will be a nurmerical vlaue showing the amount of calories the user needs to maintain their current weight.
+  - Once the user has selected an activity multiplier their TDEE (total daily energy expenditure) will be displayed in this area.
+  - The TDEE will be a numerical value showing the amount of calories the user needs to maintain their current weight.
 
 ![TDEE](docs/readme_images/tdee.png)
 
@@ -59,8 +59,8 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 ![Goals](docs/readme_images/goals.png)
 
 - New Daily Calories
-  - After a goal is choose the new total daily calories will be calculated and display here for the user.
-  - A new button will appera on this section which will open a modal box giving the user an example of how to split up their protein, carbs, and fat intake to suit thier new calorie goal.
+  - After a goal is chosen the new total daily calories will be calculated and display here for the user.
+  - A new button will appear on this section which will open a modal box giving the user an example of how to split up their protein, carbs, and fat intake to suit their new calorie goal.
 
 ![New Calories](docs/readme_images/newkcals.png)
 
@@ -78,7 +78,7 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 ![More Info Button Example](docs/readme_images/infobutton_example.png)
 
 - Hows This Calculated Buttons
-  - There are 2 hows this calculated buttons on the page in different sections which when clicked will display a new box containing more infomation about how the calculations that are running in the backfround are executed.
+  - There are 2 hows this calculated buttons on the page in different sections which when clicked will display a new box containing more information about how the calculations that are running in the background are executed.
 
 ![Hows This Calculated Buttons](docs/readme_images/calculated.png)
 
@@ -87,8 +87,8 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 
 - Modal Box and Button
   - Once the final submit button has been clicked and the final calculation has been run showing the new daily calorie allowance a new clickable button will appear with the wording "click here for example macros".
-  - When the user clicks this button a modal box will show on screen with an example breakdown of protein, carbs, and fats ratios that will fix into the new calorie target.
-  - These macros are specifc to the final calorie amount and the users weight.
+  - When the user clicks this button a modal box will show on screen with an example breakdown of protein, carbs, and fats ratios that will fit into the new calorie target.
+  - These macros are specific to the final calorie amount and the users weight.
 
 ![Modal Button](docs/readme_images/modal_button.png)
 
@@ -100,9 +100,9 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 - HTML
   - The webpage structure was created using HTML as the main language.
 - CSS
-  - The styling of the website was done using custome CSS saved in an external file.
+  - The styling of the website was done using custom CSS saved in an external file.
 - JAVASCRIPT
-  - JAVASCRIPT was used to the develop the dynamic features of the website, such as calculating BMR and displaying output.
+  - JAVASCRIPT was used to develop the dynamic features of the website, such as calculating BMR and displaying output.
 - IDE
   - The website was developed using Codeanywhere IDE.
 - Github
@@ -118,7 +118,7 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 
 - The website was tested on various screen sizes from Galaxy Fold 280px upwards and is responsive and functions as intended.
 - To test this the webpage was loaded in a browser and using Google Dev Tools was changed to 280px and then the responsive window was dragged to max size.
-- The webpage responded as intended.
+- The web page responded as intended.
 - Some devices the website was tested on outside of Dev Tools were: Iphone 11, Samsung A6, Macbook Air, HP M27fw FHD monitor.
 
 ### Accessibility
@@ -143,54 +143,54 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
   - The link works as intended.
 
 - User Input Fields
-  - In the first section of the page the user is required to fill in 3 input boxes and choose 1 of 2 options from a drop down menue, they are:
+  - In the first section of the page the user is required to fill in 3 input boxes and choose 1 of 2 options from a drop down menu, they are:
     - Age
     - Height in Cm's
     - Weight in Kg's
     - Gender
-- If the user leaves any 1 of these input fields blank or negelcts to choose a gender then when they click submit an alert will show in the broswer asking them to complete all fields and they will not be able to continue unless done so.
+- If the user leaves any 1 of these input fields blank or neglects to choose a gender then when they click submit an alert will show in the browser asking them to complete all fields and they will not be able to continue unless done so.
 
 ![Alert Message](docs/readme_images/alert.png)
 
 - User Input Field Test 1
   - The first test conducted was to leave all fields blank and to try click submit.
-  - Result: Alert showed in broswer.
+  - Result: Alert showen in browser.
   - Validation worked as intended.
 
 ![Blank Input Fields](docs/readme_images/blank_input.png)
 
 - User Input Field Test 2
-  - The secound test conducted was to fill in 1 input field, in this case Age and to try click submit.
-  - Result: Alert showed in broswer.
+  - The second test conducted was to fill in 1 input field, in this case Age and to try click submit.
+  - Result: Alert showen in browser.
   - Validation worked as intended.
 
 ![Age Input Field](docs/readme_images/age_input.png)
 
 - User Input Field Test 3
   - The third test conducted was to fill in 1 input field, in this case Height and to try click submit.
-  - Result: Alert showed in broswer.
+  - Result: Alert showen in browser.
   - Validation worked as intended.
 
 ![Height Input Field](docs/readme_images/height_input.png)
 
 - User Input Field Test 4
   - The fourth test conducted was to fill in 1 input field, in this case Weight and to try click submit.
-  - Result: Alert showed in broswer.
+  - Result: Alert showen in browser.
   - Validation worked as intended.
 
 ![Weight Input Field](docs/readme_images/weight_input.png)
 
 - User Input Field Test 5
   - The fifth test conducted was to click 1 option in gender dropdown and leave all other fields blank, in this case Male and to try click submit.
-  - Result: Alert showed in broswer.
+  - Result: Alert showen in browser.
   - Validation worked as intended.
 
 ![Gender Dropdown Test](docs/readme_images/gender_input.png)
 
 - User Input Field Test 5
   - The sixth test conducted was to fill in a combination of input fields but always leaving 1 blank, in the image below Weight is left blank.
-  - This test was run with every conbination and the result was always the same.
-  - Result: Alert showed in broswer.
+  - This test was run with every combination and the result was always the same.
+  - Result: Alert showen in browser.
   - Validation worked as intended.
 
 ![Multiple Input Fields Test](docs/readme_images/multi_input.png)
@@ -205,7 +205,7 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
   - All hows this calculated buttons on the website were tested and function as intended.
 
 - Javascript Code and Maths Testing Case Study
-  - Once confirmed that all buttons and validations were working as intended the calculations run by the javascript code was tested to ensure is was working and to test accuracy of results.
+  - Once confirmed that all buttons and validations were working as intended the calculations run by the javascript code was tested to ensure it was working and to test accuracy of results.
   - For this case study we take a fake user and run through the different stages of the page.
   - Fake user "Bruce Wayne" details:
     - Age 30
@@ -220,3 +220,40 @@ The TDEE & Macro Calculator page was created to take the guess work out of calor
 - When compared to calculations done step by step by hand the webpage produces the same results and functions as intended.
 
 ![Case Study Website](docs/readme_images/case_study_website.png)
+
+- Macro Example Testing
+  - Just like above macro splits were worked out first by hand then compared to the split given by the website.
+  - Results are the same and so code functions as intended.
+
+![Case Study Macros](docs/readme_images/case_study_macros.png)
+
+![Website Macros](docs/readme_images/website_macros.png)
+
+### Validator Testing
+
+- HTML: No errors were returned when passing through the official [W3C Validator](https://validator.w3.org)
+  
+![HTML Validator](docs/readme_images/html.webp)
+
+- CSS: No errors were returned when passing through the official [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator)
+  
+![CSS Validator](docs/readme_images/css.webp)
+
+- JavaScript: No errors were returned when passing through the [JShint validator](https://jshint.com/)
+  - One warning appears but all code functions as intended.
+
+![Javascript Validator](docs/readme_images/jshint.png)
+
+## Deployment
+
+- The site was deployed to GitHub pages.
+- In the GitHub repository, navigate to the Settings tab.
+- From the source section drop-down menu, select the Master Branch.
+- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+## Credits
+
+### Content
+
+- The code to add and style the modal box was taken from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+- My Mentor Gareth McGirr for his guidance and support throughout my project.
