@@ -244,6 +244,15 @@ The TDEE & Macro Calculator page was created to take the guesswork out of calori
 
 ![Javascript Validator](docs/readme_images/jshint.png)
 
+### Bugs
+
+- During some testing it was discovered that the input fields on the page excepted characters such as "e" "-" "+" "up arrow key" "down arrow key".
+- Looking into this I found that a floating-point number can consist of these characters so its not a true bug as such but I still wanted to remove this option from the webpage.
+- See below an image explaining this in more detail.
+- After checking online I was able to find code that will resolve this and have added this to the credits section.
+
+![Floating-point Explanation](docs/readme_images/floating_point.png)
+
 ## Deployment
 
 - The site was deployed to GitHub pages.
@@ -255,5 +264,6 @@ The TDEE & Macro Calculator page was created to take the guesswork out of calori
 
 ### Content
 
-- The code to add and style the modal box was taken from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+- The code to add and style the modal box was taken from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp).
+- The code to remove the option to add special characters to input fields was taken from [stackoverflow](https://stackoverflow.com/questions/31706611/why-does-the-html-input-with-type-number-allow-the-letter-e-to-be-entered-in).
 - My Mentor Gareth McGirr for his guidance and support throughout my project.

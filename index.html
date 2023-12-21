@@ -24,15 +24,15 @@
     <div class="personal-details">
         <div class="age">
             <label for="age">Age</label>
-            <input id="age" type="number" placeholder="25" name="age" class="text-input" required>
+            <input id="age" type="number" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" placeholder="25" name="age" class="text-input" required>
         </div>
         <div class="height">
             <label for="height">Height in Cm's</label>
-            <input id="height" type="number" placeholder="170" name="height" class="text-input" required>
+            <input id="height" type="number" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" placeholder="170" name="height" class="text-input" required>
         </div>
         <div class="weight">
             <label for="weight">Weight in Kg's</label>
-            <input id="weight" type="number" placeholder="75" class="text-input" required>
+            <input id="weight" type="number" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" placeholder="75" class="text-input" required>
         </div>
         <div class="gender">
             <label for="gender">Gender</label>
